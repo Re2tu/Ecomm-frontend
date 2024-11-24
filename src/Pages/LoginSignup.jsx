@@ -16,7 +16,7 @@ import './CSS/LoginSignUp.css'
       try {
          console.log("Login function executed", formData);
          let responseData;
-         const response = await fetch('http://localhost:4000/login', {
+         const response = await fetch('https://ecomm-backend-ammz.onrender.com/login', {
             method: 'POST',
             headers: {
                Accept: 'application/json',
@@ -48,7 +48,7 @@ import './CSS/LoginSignUp.css'
    const signup =async()=>{
       console.log("Signup function executed",formData);
       let responseData;
-      await fetch('http://localhost:4000/signup',{
+      await fetch('https://ecomm-backend-ammz.onrender.com/signup',{
          method:'POST',
          headers:{
             Accept:'application/json',
