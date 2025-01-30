@@ -12,11 +12,12 @@ import './CSS/LoginSignUp.css'
    const changeHandler=(e)=>{
      setFormData({...formData,[e.target.name]:e.target.value})
    }
+   const API_URL=process.env.REACT_APP_API_URL
    const login = async () => {
       try {
          console.log("Login function executed", formData);
          let responseData;
-         const response = await fetch('https://ecomm-backend-ammz.onrender.com/login', {
+         const response = await fetch(`${API_URL}/login`, {
             method: 'POST',
             headers: {
                Accept: 'application/json',
@@ -48,7 +49,7 @@ import './CSS/LoginSignUp.css'
    const signup =async()=>{
       console.log("Signup function executed",formData);
       let responseData;
-      await fetch('https://ecomm-backend-ammz.onrender.com/signup',{
+      await fetch(`${API_URL}/signup`,{
          method:'POST',
          headers:{
             Accept:'application/json',
